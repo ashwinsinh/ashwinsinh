@@ -1,16 +1,13 @@
-## Hi there 👋
+# Pranam India — SmartQuote AI
 
-<!--
-**ashwinsinh/ashwinsinh** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+A browser-based quotation workspace for planning residential, commercial, and industrial Daikin VRV projects. The demo includes a guided project brief, multi-floor area planning, editable equipment/accessory selections, pricing, and a polished quotation preview.
 
-Here are some ideas to get you started:
+## Run locally
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+```bash
+python3 -m http.server 4173
+```
+
+Open <http://localhost:4173> in Google Chrome.
+
+> The included equipment catalogue is a small demonstration dataset. Replace it with validated rows from `DAIKIN_VRV.XLS` before using generated quotations commercially.
