@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#07120f" />
+  <title>SmartQuote AI · Pranam India</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Pranam India home">
+      <span class="brand-mark"><i></i><i></i><i></i></span>
+      <span><b>PRANAM</b><small>INDIA · JETPUR</small></span>
+    </a>
+    <nav><a class="active" href="#workspace">Workspace</a><a href="#catalogue">Catalogue</a><a href="#quotes">Quotations</a></nav>
+    <div class="top-actions"><button class="icon-button" aria-label="Notifications">♢<span></span></button><div class="avatar">AS</div><div class="profile"><b>Ashwin S.</b><small>Project Admin</small></div></div>
+  </header>
+
+  <main id="workspace">
+    <section class="hero">
+      <div class="eyebrow"><span></span> AI-POWERED HVAC INTELLIGENCE</div>
+      <h1>Build the perfect climate.<br><em>We’ll engineer the quote.</em></h1>
+      <p>From one room to an entire enterprise—configure every space, let SmartSelect™ recommend the right system, and deliver a professional proposal in minutes.</p>
+      <div class="trust-row"><span><b>01</b> Project brief</span><i></i><span><b>02</b> Smart selection</span><i></i><span><b>03</b> Review & quote</span></div>
+    </section>
+
+    <section class="workspace-card">
+      <div class="section-heading">
+        <div><span class="step">01</span><div><h2>What are we cooling today?</h2><p>Select the project profile that best matches your client.</p></div></div>
+        <span class="saved">● Draft saved just now</span>
+      </div>
+      <div class="project-grid" id="projectGrid">
+        <button class="project-card selected" data-type="Small Residence"><span class="project-icon">⌂</span><span><b>Small Residence</b><small>Up to 2,000 sq.ft.</small></span><i>✓</i></button>
+        <button class="project-card" data-type="Medium Residence"><span class="project-icon">⌂</span><span><b>Medium Residence</b><small>2,000 – 5,000 sq.ft.</small></span><i>✓</i></button>
+        <button class="project-card" data-type="Large Residence"><span class="project-icon">▥</span><span><b>Large Residence</b><small>5,000+ sq.ft.</small></span><i>✓</i></button>
+        <button class="project-card" data-type="Small Commercial"><span class="project-icon">▦</span><span><b>Small Commercial</b><small>Shops & offices</small></span><i>✓</i></button>
+        <button class="project-card" data-type="Medium Commercial"><span class="project-icon">▦</span><span><b>Medium Commercial</b><small>Multi-zone spaces</small></span><i>✓</i></button>
+        <button class="project-card" data-type="Large Commercial"><span class="project-icon">▤</span><span><b>Large Commercial</b><small>Complex projects</small></span><i>✓</i></button>
+        <button class="project-card" data-type="Small Industrial"><span class="project-icon">⌁</span><span><b>Small Industrial</b><small>Light operations</small></span><i>✓</i></button>
+        <button class="project-card" data-type="Medium Industrial"><span class="project-icon">⌁</span><span><b>Medium Industrial</b><small>Factory floors</small></span><i>✓</i></button>
+        <button class="project-card" data-type="Corporate Industrial"><span class="project-icon">◇</span><span><b>Corporate Industrial</b><small>Enterprise campus</small></span><i>✓</i></button>
+        <button class="project-card custom" data-type="Custom Project"><span class="project-icon">＋</span><span><b>Custom requirements</b><small>Build from a blank canvas</small></span><i>✓</i></button>
+      </div>
+
+      <div class="divider"></div>
+      <div class="section-heading compact"><div><span class="step">02</span><div><h2>How would you like to configure?</h2><p>You remain in control at every stage.</p></div></div></div>
+      <div class="mode-grid">
+        <button class="mode-card selected" data-mode="smart"><span class="radio"></span><span class="mode-icon">✦</span><span><span class="badge">RECOMMENDED</span><b>SmartSelect™ by Pranam</b><small>AI analyses room volume, usage and load to recommend the ideal Daikin system and every compatible accessory.</small><em>Auto sizing · Accessory matching · Load intelligence</em></span></button>
+        <button class="mode-card" data-mode="manual"><span class="radio"></span><span class="mode-icon">⌘</span><span><b>Configure manually</b><small>Pick each product, quantity, accessory and price yourself from the equipment catalogue.</small><em>Full control · Catalogue access · Custom pricing</em></span></button>
+      </div>
+      <button class="primary" id="startBtn">Start project configuration <span>→</span></button>
+    </section>
+
+    <section class="planner hidden" id="planner">
+      <div class="planner-head"><div><div class="eyebrow"><span></span> LIVE PROJECT</div><h2 id="projectTitle">Small Residence Configuration</h2><p>Add every cooled space across every floor. SmartSelect sizes each zone independently.</p></div><button class="ghost" id="addFloor">＋ Add floor</button></div>
+      <div id="floors"></div>
+      <div class="summary-bar"><div><small>PROJECT LOAD</small><b id="totalLoad">2.80 TR</b></div><div><small>INDOOR UNITS</small><b id="unitCount">2 units</b></div><div><small>EQUIPMENT</small><b id="equipmentTotal">₹1,17,000</b></div><button class="primary" id="reviewBtn">Review quotation <span>→</span></button></div>
+    </section>
+
+    <section class="quote hidden" id="quote">
+      <div class="quote-top"><div><span class="brand-mark"><i></i><i></i><i></i></span><div><h3>PRANAM INDIA</h3><small>Complete Air-Conditioning Solutions</small></div></div><div><span>QUOTATION</span><b id="quoteNo">PI/VRV/2026/1042</b><small>Valid for 15 days</small></div></div>
+      <div class="quote-title"><div><small>PREPARED FOR</small><input value="Client / Project Name" aria-label="Client name"><p id="quoteProject">Small Residence · SmartSelect™ engineered solution</p></div><button class="print" onclick="window.print()">↗ Print / Save PDF</button></div>
+      <div class="table-wrap"><table><thead><tr><th>Zone & system</th><th>Model / accessories</th><th>Qty.</th><th>Unit price</th><th>Amount</th></tr></thead><tbody id="quoteRows"></tbody></table></div>
+      <div class="costing"><div class="notes"><b>System intelligence</b><p>Selections include matched indoor unit, decoration panel and wired controller. Final capacity is subject to on-site heat-load verification.</p><label>Project piping (single consolidated price)<span>₹ <input id="pipingPrice" type="number" value="32000"></span></label><label>Installation charges<span>₹ <input id="installPrice" type="number" value="18000"></span></label></div><div class="totals"><p><span>Equipment subtotal</span><b id="subtotal">₹1,17,000</b></p><p><span>Piping & installation</span><b id="serviceTotal">₹50,000</b></p><p><span>GST (18%)</span><b id="taxTotal">₹30,060</b></p><hr><p class="grand"><span>Project total</span><b id="grandTotal">₹1,97,060</b></p><small>Prices in Indian Rupees · Inclusive of GST</small></div></div>
+      <div class="quote-footer"><div><b>PRANAM INDIA</b><span>JETPUR · Gujarat</span></div><p>Engineered with precision by SmartSelect™</p></div>
+    </section>
+  </main>
+  <footer><div><b>CYBER<span>TECH</span></b><small>Experience. Engineering. Excellence.</small></div><p>Designed & developed by <strong>Cyber Tech</strong> · Guru Krupa, Kanakia Plot, Swami Bhagwat Tirth Marg, Jetpur — 360370<br>WhatsApp: <a href="https://wa.me/919924900377">+91 99249 00377</a></p></footer>
+  <script src="app.js"></script>
+</body>
+</html>
